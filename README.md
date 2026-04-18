@@ -5,7 +5,9 @@
 Under the risk-neutral measure \(Q\):
 ```math
 dS_t = (r-q) S_t dt + \sqrt{V_t} S_t dW_t^{(S)}
+
 dV_t = \kappa(\theta - V_t)dt + \sigma \sqrt{V_t} dW_t^{(V)}
+
 dW_t^{(S)} dW_t^{(V)} = \rho dt
 ```
 Pricing uses the characteristic function of log(S_T) and Fourier inversion:
