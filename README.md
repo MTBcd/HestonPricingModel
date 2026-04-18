@@ -38,7 +38,7 @@ The implementation includes:
 
 ## Example run
 ```bash
-python run_example.p
+python run_example.py
 ```
 
 ## Explanation of outputs
