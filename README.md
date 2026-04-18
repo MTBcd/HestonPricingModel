@@ -1,17 +1,22 @@
 # Heston Stochastic Volatility Reference Project
 ## Model overviewThe Heston model extends Black-Scholes by making variance stochastic and correlated with spot returns.
-## Mathematical details```textUnder Q:
+## Mathematical details
+
+Under the risk-neutral measure \(Q\):
+
+```text
 dS_t = (r-q) S_t dt + \sqrt{V_t} S_t dW_t^{(S)}
 dV_t = \kappa(\theta - V_t)dt + \sigma \sqrt{V_t} dW_t^{(V)}
 dW_t^{(S)} dW_t^{(V)} = \rho dt
 
 Pricing uses the characteristic function of log(S_T) and Fourier inversion:
 C = S_0 e^{-qT} P_1 - K e^{-rT} P_2
+```
 
 The implementation includes:
 1. characteristic-function pricing,
 2. full-truncation Euler Monte Carlo.
-```
+
 
 ## Assumptions
 - Variance follows a CIR-type square-root diffusion.
@@ -25,8 +30,6 @@ The implementation includes:
 - `requirements.txt`
 - `run_example.py`
 - `README.md`
-- `FULL_FILE_CONTENTS.md`
-- `example_output.txt`
 
 ## Example run
 ```bash
